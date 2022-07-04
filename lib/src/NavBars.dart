@@ -8,11 +8,13 @@ class DotNavigationBar extends StatelessWidget {
       {Key? key,
       required this.items,
       this.currentIndex = 0,
+      this.width,
       this.onTap,
       this.selectedItemColor,
       this.unselectedItemColor,
       this.margin = const EdgeInsets.all(8),
-      this.itemPadding = const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      this.itemPadding =
+          const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       this.duration = const Duration(milliseconds: 500),
       this.curve = Curves.easeOutQuint,
       this.dotIndicatorColor,
@@ -37,6 +39,7 @@ class DotNavigationBar extends StatelessWidget {
 
   /// The tab to display.
   final int currentIndex;
+  final double? width;
 
   /// Returns the index of the tab that was tapped.
   final Function(int)? onTap;
@@ -99,7 +102,7 @@ class DotNavigationBar extends StatelessWidget {
                       color: backgroundColor,
                       boxShadow: boxShadow,
                     ),
-                    width: double.infinity,
+                    width: width,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Body(
