@@ -60,12 +60,13 @@ class Body extends StatelessWidget {
                   focusColor: _selectedColor.withOpacity(0.1),
                   highlightColor: _selectedColor.withOpacity(0.1),
                   splashColor: _selectedColor.withOpacity(0.1),
-                  hoverColor: _selectedColor.withOpacity(0.1),
+                  hoverColor: Colors.transparent,
                   child: Stack(children: <Widget>[
                     Padding(
-                      padding: itemPadding - (enablePaddingAnimation 
-                          ? EdgeInsets.only(right: itemPadding.right * t) 
-                          : EdgeInsets.zero),
+                      padding: itemPadding -
+                          (enablePaddingAnimation
+                              ? EdgeInsets.only(right: itemPadding.right * t)
+                              : EdgeInsets.zero),
                       child: Row(
                         children: [
                           IconTheme(
